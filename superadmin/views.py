@@ -451,9 +451,9 @@ class categorycreate(LoginRequiredMixin, View):
             data = Category()
             messages.info(request, 'Successfully Added')
 
-        
-
-       
+        image = request.FILES.get('image')
+        if image:
+            data.image=image
 
         data.title=request.POST.get('title')
         data.save()

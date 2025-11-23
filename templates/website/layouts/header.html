@@ -1,0 +1,89 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amokatharayi | Home </title>
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'website/assets/img/fav.png' %}">
+    <!-- fontawesome 6.4.2 -->
+    <link rel="stylesheet" href="{% static 'website/assets/css/plugins/fontawesome-6.css' %}">
+    <!-- swiper Css 10.2.0 -->
+    <link rel="stylesheet" href="{% static 'website/assets/css/plugins/swiper.min.css' %}">
+    <!-- magnific popup css -->
+    <link rel="stylesheet" href="{% static 'website/assets/css/vendor/magnific-popup.css' %}">
+    <!-- Bootstrap 5.0.2 -->
+    <link rel="stylesheet" href="{% static 'website/assets/css/vendor/bootstrap.min.css' %}">
+    <!-- jquery ui css -->
+    <link rel="stylesheet" href="{% static 'website/assets/css/vendor/jquery-ui.css' %}">
+    <!-- metismenu scss -->
+    <link rel="stylesheet" href="{% static 'website/assets/css/vendor/metismenu.css' %}">
+    <!-- custom style css -->
+    <link rel="stylesheet" href="{% static 'website/assets/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'website/assets/css/custom.css' %}">
+</head>
+
+<body>
+
+    <!-- header style one -->
+    <header class="header-one v-2 ">
+       
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="header-one-wrapper">
+                        <div class="left-side-header">
+                            <a href="{% url 'website:index' %}" class="logo-area">
+                                <img src="{% static 'website/assets/img/Amokhatrayi-logo.png' %}" alt="logo">
+                            </a>
+
+                            
+                        </div>
+                        <div class="header-right-area-one">
+                            <div class="main-nav-one">
+                                <nav>
+                                    <ul>
+                                       
+
+                                        <li >
+                                                <a class="nav-link" href="{% url 'website:index' %}">Home</a>
+                                           
+                                        </li>
+                                        <li >
+                                            <a class="nav-link" href="courses.php">Courses</a>
+                                           
+                                        </li>
+                                        <li >
+                                            <a class="nav-link" href="about.php">About Us</a>
+                                           
+                                        </li>
+                                        <li >
+                                            <a class="nav-link" href="contact.php">Contact Us</a>
+                                           
+                                        </li>
+                                       
+                                    </ul>
+                                </nav>
+                            </div>
+
+                           
+                            <div class="buttons-area">
+                                <a href="login.php" class="rts-btn btn-login">Log In</a>
+                                <a href="courses.php" class="rts-btn btn-primary">Sign Up</a>
+                            </div>
+                            <div class="menu-btn" id="menu-btn">
+                                <svg width="20" height="16" viewBox="0 0 20 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect y="14" width="20" height="2" fill="#1F1F25"></rect>
+                                    <rect y="7" width="20" height="2" fill="#1F1F25"></rect>
+                                    <rect width="20" height="2" fill="#1F1F25"></rect>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header style end -->

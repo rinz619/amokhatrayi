@@ -27,4 +27,10 @@ def mycoursecount(uid):
 def mycertificatecount(uid):
     lead = UserCourses.objects.filter(user=uid,course__enddate__lt=datetime.now().date()).count()
     return lead
-    
+
+@register.simple_tag()
+def course_count(id):
+    lead = Courses.objects.filter(category=id).count()
+    return lead
+
+

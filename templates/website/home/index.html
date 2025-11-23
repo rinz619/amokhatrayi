@@ -1,0 +1,494 @@
+{% include "website/layouts/header.html" %}
+{% load static %}
+{% load custom_tags %}
+
+    <!-- banner area start -->
+    <div class="banner-two-flow-1920">
+       
+            <div class="container">
+                 <div class="banner-area-one v-2 bg_image shape-move">
+                <div class="row">
+                    <div class="col-lg-6 order-xl-1 order-lg-1 order-md-2 order-sm-2 order-2">
+                        <div class="banner-content-one">
+                            <div class="inner">
+                                <div class="pre-title-banner">
+                                   
+                                    <span>Amokhatrayi Wellness and Coaching Institute</span>
+                                </div>
+                                <h1 class="title-banner">
+                                    Empowering wellness 
+                                    through Ayurveda
+                                    <!-- <img src="assets/images/banner/06.png" alt="banner"> -->
+                                </h1>
+                                <p class="disc">Experience the harmony of healing and learning with Ayurveda.</p>
+                               
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="col-lg-6 order-xl-2 order-lg-2 order-md-1 order-sm-1 order-1">
+                        <div class="banner-right-img">
+                            <img src="assets/images/banner/05.png" alt="banner">
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+           
+        </div>
+    </div>
+    <!-- banner area end -->
+
+    <!-- rts-top-category -->
+    <div class="top-category-area rts-section-gap">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="title-area-center-style">
+                       
+                        <h2 class="title">Explore 500+ Free Courses</h2>
+                        <p class="post-title">Start your journey toward healing and self-mastery with 500+ free Ayurveda and wellness courses.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-5 mt--30">
+                {% for category in category %}
+                <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+                    <!-- single course category -->
+                    <a href="courses.php" class="single-category-2">
+                        <div class="icon">
+                            <img src="{{ category.image.url }}" alt="category">
+                        </div>
+                        <div class="information">
+                            <h5 class="title">{{ category.title }}</h5>
+                            <p>{% course_count category.id %} Courses</p>
+                        </div>
+                    </a>
+                    <!-- single course category end -->
+                </div>
+                {% endfor %}
+                
+            </div>
+        </div>
+    </div>
+    <!-- rts-top-category end -->
+
+  
+
+    <!-- course area start -->
+    <div class="course-area-two rts-section-gapBottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="title-between-area align-items-end">
+                        <div class="title-area-left-style">
+                            
+                            <h2 class="title mb--5">Explore Featured Courses</h2>
+                            <p class="disc">
+                                You'll find something to spark your curiosity and enhance
+                            </p>
+                        </div>
+                       
+                    </div>
+                </div>
+            </div>
+            <div class="row g-5 mt--20 pb--20 justify-content-center">
+                {% for course in course %}
+                <div class="col-lg-4">
+                    <!-- single course style two -->
+                            <div class="rts-single-course">
+                                <a href="course-single.php" class="thumbnail">
+                                    <img src="{{ course.image.url }}" alt="course">
+                                </a>
+                                
+                                <div class="tags-area-wrapper">
+                                    <div class="single-tag">
+                                        <span>{{ course.category.title }}</span>
+                                    </div>
+                                </div>
+                                <div class="lesson-studente">
+                                    <div class="lesson">
+                                        <i class="fa-light fa-calendar-lines-pen"></i>
+                                        <span>{{ course.lessons.count }} Lessons</span>
+                                    </div>
+                                   
+                                </div>
+                                <a href="course-single.php">
+                                    <h5 class="title">{{ course.title }}</h5>
+                                </a>
+                                <p class="teacher">Instructor: {{ course.instructor.name }}</p>
+                                <div class="rating-and-price">
+                                    
+                                    <div class="price-area">
+                                        
+                                        <div class="price">
+                                            {{ course.price }}
+                                        </div>
+                                    </div>
+                                    <div class="btn-course">
+                                        <a href="course-single.php" class="rts-btn btn-primary">Enroll Now</a>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- single course style two end -->
+                </div>
+                {% endfor %}
+            </div>
+
+               
+
+                <div class="col-lg-3 course-btn">
+                     <a href="#" class="rts-btn btn-login">View All Course</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- course area end -->
+
+
+    <!-- fun facts area start -->
+    <div class="fun-facts-area-1  ptb--50">
+        <div class="container">
+            <div class="stat-box">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="fun-facts-main-wrapper-1">
+                        <!-- single  -->
+                        <div class="single-fun-facts">
+                            <div class="icon">
+                                <img src="{% static 'website/assets/images/fun-facts/01.svg' %}" alt="icon">
+                            </div>
+                            <h5 class="title"><span class="counter">65,972</span></h5>
+                            <span class="enr">Students Enrolled</span>
+                        </div>
+                        <!-- single end -->
+                        <!-- single  -->
+                        <div class="single-fun-facts">
+                            <div class="icon">
+                                <img src="{% static 'website/assets/images/fun-facts/02.svg' %}" alt="icon">
+                            </div>
+                            <h5 class="title"><span class="counter">5,321</span></h5>
+                            <span class="enr">Completed Course</span>
+                        </div>
+                        <!-- single end -->
+                        <!-- single  -->
+                        <div class="single-fun-facts">
+                            <div class="icon">
+                                <img src="{% static 'website/assets/images/fun-facts/03.svg' %}" alt="icon">
+                            </div>
+                            <h5 class="title"><span class="counter">44,239</span></h5>
+                            <span class="enr">Students Learner</span>
+                        </div>
+                        <!-- single end -->
+                        <!-- single  -->
+                        <div class="single-fun-facts">
+                            <div class="icon">
+                                <img src="{% static 'website/assets/images/fun-facts/04.svg' %}" alt="icon">
+                            </div>
+                            <h5 class="title"><span class="counter">75,992</span></h5>
+                            <span class="enr">Students Enrolled</span>
+                        </div>
+                        <!-- single end -->
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+       
+    </div>
+    <!-- fun facts area end -->
+
+    <!-- rts testimonials area  -->
+    <div class="testimonials-area rts-section-gap rts-section-gapBottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="title-area-center-style">
+                        
+                        <h2 class="title">Our Students Feedback</h2>
+                        <p class="post-title">You'll find something to spark your curiosity and enhance</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-full mt--50">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="marque-main-wrapper-parent-flex">
+                        <div class="marquree-wrapper-1">
+                            <!-- single testimonials-area -->
+                            <div class="single-testimonials-area-1">
+                                <div class="stars-area">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </div>
+                                <p class="disc">
+                                    I can't recommend The Gourmet Haven enough. It's a place for special occasions, date
+                                    nights, or whenever you're in the mood for a culinary.
+                                </p>
+                                <div class="feedback-author">
+                                    <img src="{% static 'website/assets/images/students-feedback/02.png' %}" alt="students-feedback">
+                                    <div class="information">
+                                        <h5 class="title">Emma Elizabeth</h5>
+                                        <span>Assistant Teacher</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- single testimonials-area end -->
+                            <!-- single testimonials-area -->
+                            <div class="single-testimonials-area-1">
+                                <div class="stars-area">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </div>
+                                <p class="disc">
+                                    I can't recommend The Gourmet Haven enough. It's a place for special occasions, date
+                                    nights, or whenever you're in the mood for a culinary.
+                                </p>
+                                <div class="feedback-author">
+                                    <img src="{% static 'website/assets/images/students-feedback/03.png' %}" alt="students-feedback">
+                                    <div class="information">
+                                        <h5 class="title">Jack Benjamin</h5>
+                                        <span>Assistant Teacher</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- single testimonials-area end -->
+                            <!-- single testimonials-area -->
+                            <div class="single-testimonials-area-1">
+                                <div class="stars-area">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </div>
+                                <p class="disc">
+                                    I can't recommend The Gourmet Haven enough. It's a place for special occasions, date
+                                    nights, or whenever you're in the mood for a culinary.
+                                </p>
+                                <div class="feedback-author">
+                                    <img src="{% static 'website/assets/images/students-feedback/04.png' %}" alt="students-feedback">
+                                    <div class="information">
+                                        <h5 class="title">Samuel John </h5>
+                                        <span>Assistant Teacher</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- single testimonials-area end -->
+                            <!-- single testimonials-area -->
+                            <div class="single-testimonials-area-1">
+                                <div class="stars-area">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </div>
+                                <p class="disc">
+                                    I can't recommend The Gourmet Haven enough. It's a place for special occasions, date
+                                    nights, or whenever you're in the mood for a culinary.
+                                </p>
+                                <div class="feedback-author">
+                                    <img src="{% static 'website/assets/images/students-feedback/05.png' %}" alt="students-feedback">
+                                    <div class="information">
+                                        <h5 class="title">Samantha Willow</h5>
+                                        <span>Assistant Teacher</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- single testimonials-area end -->
+                        </div>
+                        <div class="marquree-wrapper-1">
+                            <!-- single testimonials-area -->
+                            <div class="single-testimonials-area-1">
+                                <div class="stars-area">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </div>
+                                <p class="disc">
+                                    I can't recommend The Gourmet Haven enough. It's a place for special occasions, date
+                                    nights, or whenever you're in the mood for a culinary.
+                                </p>
+                                <div class="feedback-author">
+                                    <img src="{% static 'website/assets/images/students-feedback/06.png' %}" alt="students-feedback">
+                                    <div class="information">
+                                        <h5 class="title">Emma Elizabeth</h5>
+                                        <span>Assistant Teacher</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- single testimonials-area end -->
+                            <!-- single testimonials-area -->
+                            <div class="single-testimonials-area-1">
+                                <div class="stars-area">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </div>
+                                <p class="disc">
+                                    I can't recommend The Gourmet Haven enough. It's a place for special occasions, date
+                                    nights, or whenever you're in the mood for a culinary.
+                                </p>
+                                <div class="feedback-author">
+                                    <img src="{% static 'website/assets/images/students-feedback/07.png' %}" alt="students-feedback">
+                                    <div class="information">
+                                        <h5 class="title">Emma Elizabeth</h5>
+                                        <span>Assistant Teacher</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- single testimonials-area end -->
+                            <!-- single testimonials-area -->
+                            <div class="single-testimonials-area-1">
+                                <div class="stars-area">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </div>
+                                <p class="disc">
+                                    I can't recommend The Gourmet Haven enough. It's a place for special occasions, date
+                                    nights, or whenever you're in the mood for a culinary.
+                                </p>
+                                <div class="feedback-author">
+                                    <img src="{% static 'website/assets/images/students-feedback/08.png' %}" alt="students-feedback">
+                                    <div class="information">
+                                        <h5 class="title">Emma Elizabeth</h5>
+                                        <span>Assistant Teacher</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- single testimonials-area end -->
+                            <!-- single testimonials-area -->
+                            <div class="single-testimonials-area-1">
+                                <div class="stars-area">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </div>
+                                <p class="disc">
+                                    I can't recommend The Gourmet Haven enough. It's a place for special occasions, date
+                                    nights, or whenever you're in the mood for a culinary.
+                                </p>
+                                <div class="feedback-author">
+                                    <img src="{% static 'website/assets/images/students-feedback/09.png' %}" alt="students-feedback">
+                                    <div class="information">
+                                        <h5 class="title">Emma Elizabeth</h5>
+                                        <span>Assistant Teacher</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- single testimonials-area end -->
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- rts testimonials area end -->
+
+   
+ <!-- rts blog area start -->
+    <div class="rts-section-gap rts-blog-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="title-area-center-style">
+                       
+                        <h2 class="title">Read Our Latest News</h2>
+                        <p class="post-title"> Our mission is to provide you with valuable insights</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-5 mt--20">
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="single-blog-style-one">
+                        <a href="blog-details.php" class="thumbnail">
+                            <img src="{% static 'website/assets/images/blog/01.jpg' %}" alt="blog">
+                            <div class="tags-area">
+                                <span>Marketing</span>
+                            </div>
+                        </a>
+                        <div class="blog-top-area">
+                            <div class="single">
+                                <i class="fa-light fa-calendar-days"></i>
+                                <p>October 26, 2023</p>
+                            </div>
+                           
+                        </div>
+                        <a href="blog-details.php">
+                            <h5 class="title">Announcing the winners the 2023 Education com Story Challenge!</h5>
+                        </a>
+                        <div class="button-area">
+                            <a href="blog-details.php" class="rts-btn btn-primary readmore-btn">Read More </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="single-blog-style-one">
+                        <a href="blog-details.php" class="thumbnail">
+                            <img src="{% static 'website/assets/images/blog/01.jpg' %}" alt="blog">
+                            <div class="tags-area">
+                                <span>Marketing</span>
+                            </div>
+                        </a>
+                        <div class="blog-top-area">
+                            <div class="single">
+                                <i class="fa-light fa-calendar-days"></i>
+                                <p>October 26, 2023</p>
+                            </div>
+                           
+                        </div>
+                        <a href="blog-details.php">
+                            <h5 class="title">Announcing the winners the 2023 Education com Story Challenge!</h5>
+                        </a>
+                        <div class="button-area">
+                            <a href="blog-details.php" class="rts-btn btn-primary readmore-btn">Read More </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="single-blog-style-one">
+                        <a href="blog-details.php" class="thumbnail">
+                            <img src="{% static 'website/assets/images/blog/01.jpg' %}" alt="blog">
+                            <div class="tags-area">
+                                <span>Marketing</span>
+                            </div>
+                        </a>
+                        <div class="blog-top-area">
+                            <div class="single">
+                                <i class="fa-light fa-calendar-days"></i>
+                                <p>October 26, 2023</p>
+                            </div>
+                           
+                        </div>
+                        <a href="blog-details.php">
+                            <h5 class="title">Announcing the winners the 2023 Education com Story Challenge!</h5>
+                        </a>
+                        <div class="button-area">
+                            <a href="blog-details.php" class="rts-btn btn-primary readmore-btn">Read More </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- rts blog area end -->
+
+    {% include "website/layouts/footer.html" %}

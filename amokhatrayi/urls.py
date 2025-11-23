@@ -25,6 +25,7 @@ from django.conf.urls import handler404
 
 urlpatterns = [
     path('admin-panel/', include('superadmin.urls')),
+    path('', include('website.urls')),
 ]
 
 # handler404 = custom_404_view

@@ -1,0 +1,208 @@
+.header-one-wrapper .left-side-header a img {
+    width: 90px;
+}
+.header-top-one-wrapper .header-top-one {
+    padding: 12px 0;
+}
+a.rts-btn.btn-login {
+    background-color:#028bb9 !important;
+    border: 1px solid;
+}
+.header-one-wrapper .left-side-header a.login-img img {
+    width: 90px;
+}
+.login-page-form-area a img {
+    width: 125px;
+    margin-bottom: 30px;
+}
+.contact-thumbnail-login-p img {
+    width: 90%;
+}
+.dashboard-left-single-wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.login-page-form-area.success-box .title {
+    margin-bottom: 0;
+}
+.login-page-form-area.success-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.login-page-form-area.success-box  p {
+    margin-bottom: 20px;
+}
+.footer-form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer-singl-wized.left-logo .body{
+    text-align: center;
+}
+.stat-box {
+    background-color: #028bb9;
+    padding: 50px;
+    border-radius: 8px;
+}
+.course-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px;
+}
+.setting-change-password-area .title {
+    margin: 30px 0;
+    font-size: 19px;
+}
+
+
+.file-custom label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 6px;
+    font-size: 14px;
+}
+
+ .file-custom input[type="file"] {
+  display: block;
+    padding: 6px;
+    border-radius: 6px;
+    width: 100%;
+    line-height: 33px;
+    font-size: 14px;
+}
+.login-page-form-area.register-form {
+    text-align: left;
+}
+.login-page-form-area.register-form .btn-primary {
+    margin-top: 30px;
+}
+
+/* responsive */
+
+@media only screen and (max-width: 999px) {
+  .banner-area-one.v-2 {
+    padding-left: 25px;
+  }
+      .banner-area-one .title-banner {
+        font-size: 29px;
+        line-height: 1.1;
+        margin: 10px 0;
+    }
+    .banner-area-one .pre-title-banner span{
+        font-size: 14px;
+    }
+    .banner-area-one.v-2 .banner-content-one p.disc {
+    font-size: 15px;
+    line-height: 22px;
+}
+.title-area-center-style .title, .title-area-left-style .title {
+    margin-bottom: 8px;
+    font-size: 25px;
+}
+.single-category-2 .information .title {
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+.rts-single-course .lesson-studente{
+    
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.rts-single-course .teacher {
+    margin-top: 6px; 
+}
+ .rts-btn {
+    padding:8px 20px;
+  }
+.stat-box {
+    padding: 60px 35px;
+}
+.single-fun-facts span.enr {
+    font-size: 14px;
+    line-height: 28px;
+}
+.footer-callto-action-area .footer-one-main-wrapper .footer-singl-wized .menu {
+    margin-top: 30px;
+}
+.ptb--105 {
+    padding: 55px 0;
+}
+.course-details-breadcrumb-2 {
+    padding: 55px 0;
+}
+.right-course-details .course-side-bar .price-area .title {
+    font-size: 28px;
+}
+.single-instructor-area-details {
+    padding: 25px;
+}
+ .dashboard-banner-area-start {
+        height: 245px;
+    }
+    .dashboard-banner-area-start .author-profile-image-and-name .name-desig .title{
+        
+    font-size: 26px;
+    }
+    .dashboard-banner-area-start .author-profile-image-and-name .profile-pic{
+        margin-bottom: 0;
+    }
+    .dashboard-banner-area-start .author-profile-image-and-name .profile-pic{
+        
+    width: 110px;
+    height: 110px;
+    }
+    .dashboard-left-single-wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+.left-sindebar-dashboard .dashboard-left-single-wrapper .single-item {
+    padding: 15px 0;
+    display: flex;
+    align-items: start;
+    gap: 15px;
+    border-bottom: 1px solid #0000001c;
+    width: 100%;
+}
+.left-sindebar-dashboard .dashboard-left-single-wrapper .single-item:last-child{
+    border: none;;
+}
+.single-dashboard-card .title {
+    font-size: 30px;
+}
+.single-dashboard-card p {
+    font-size: 14px;
+}
+.login-page-form-area{
+     
+    height: 100%;
+}
+.footer-form {
+    flex-direction: column;
+    margin-top: 14px;
+}
+.login-page-form-area p{
+    
+    margin-bottom: 0;
+}
+.login-registration-wrapper {
+    height: auto;
+    overflow-y: auto;
+    padding: 30px 10px;
+
+}
+.rts-bread-crumbarea-1 {
+    padding: 40px 0;
+}
+    .breadcrumb-main-wrapper .title {
+        font-size: 26px;
+        line-height: 1;
+        margin-bottom: 10px;
+    }
+}
