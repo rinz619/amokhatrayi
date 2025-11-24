@@ -19,5 +19,23 @@ class index(View):
         context['category'] = Category.objects.all()
         context['course'] = Courses.objects.all()
         return renderhelper(request, 'home', 'index',context)
-    
+
+
+class CoursesView(View):
+    def get(self, request,slug):
+        context = {}
+        if slug:
+            context['course'] = Courses.objects.filter(category__slug=slug)
+        else:
+            context['course'] = Courses.objects.all()
+        return renderhelper(request, 'course', 'courses',context)
+
+
+class CourseDetailView(View):
+    def get(self, request,slug):
+        context = {}
+
+        context['course'] = Courses.objects.get(slug=slug)
+        return renderhelper(request, 'course', 'course-single',context)
+
 

@@ -159,6 +159,14 @@ class Category(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
+    slug = AutoSlugField(populate_from='title', null=True, blank=True, unique=True)
+
+    def save(self, *args, **kwargs):
+        if not self.slug or self.title != self.slug:
+            self.slug = AutoSlugField(populate_from='title', unique=True).slugify(self.title)
+
+        super(Category, self).save(*args, **kwargs)
+
 class Courses(models.Model):
     category = models.ForeignKey(Category,on_delete=models.SET_NULL,null=True, blank=True)
     title = models.TextField(null=True, blank=True)

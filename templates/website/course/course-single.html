@@ -1,0 +1,279 @@
+{% load static %}
+{% include 'website/layouts/header.html' %}
+
+ <!-- course details breadcrumb -->
+    <div class="course-details-breadcrumb-2 bg_image rts-section-gap">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-12">
+                    <div class="single-course-left-align-wrapper">
+                        <div class="meta-area">
+                            <a href="index.html">Home</a>
+                            <i class="fa-solid fa-chevron-right"></i>
+                            <a class="active" href="#">Course Details</a>
+                        </div>
+                        <h1 class="title">
+                           {{ course.title |upper}}
+                        </h1>
+                       
+                        <div class="author-area">
+                            <div class="author">
+                                <img src="{{ course.trainer.image.url }}" alt="breadcrumb" width="100" height="100">
+                                <h6 class="name"><span>By</span> {{ course.trainer.name }}</h6>
+                            </div>
+                            <p> <span>Categories: </span> {{ course.category.name }}</p>
+                        </div>
+
+                        <!-- <div class="price-area">
+                                <h3 class="title">$79.99</h3>
+                                <h4 class="none">$79.99</h4>
+                               
+                        </div>
+                            
+                        <a href="#" class="rts-btn btn-border">Enroll Now</a> -->
+   
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- course details breadcrumb end -->
+
+
+
+
+    <!-- course details-area start -->
+    <div class="course-details-wrapper-2 rts-section-gap">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-8 order-cl-1 order-lg-1 order-md-2 order-sm-2 order-2">
+
+                    <div class="thumbnail mb--30" style="position: relative;">
+                        <img src="{{ course.image.url }}" alt="" >
+                        
+                    </div>
+                    <div class="course-content-wrapper">
+                        <h5 class="title">About Course</h5>
+                        
+                        <p class="disc">
+                            {{ course.description }}
+                        </p>
+                     
+                        
+                    </div>
+                    <div class="course-content-wrapper-main mt--40">
+                        <h5 class="title">Course Content</h5>
+
+                        <!-- course content accordion area -->
+                        <div class="accordion mt--30" id="accordionExample">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        <span>Introduction</span>
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <!-- play single area start -->
+                                        <a href="#" class="play-vedio-wrapper">
+                                            <div class="left">
+                                                <i class="fa-light fa-circle-play"></i>
+                                                <span>Introduction to the course</span>
+                                            </div>
+                                            <div class="right">
+                                                <span class="play">Preview</span>
+                                            </div>
+                                        </a>
+                                        <!-- play single area end -->
+                                        <!-- play single area start -->
+                                        <a href="#" class="play-vedio-wrapper">
+                                            <div class="left">
+                                                <i class="fa-light fa-circle-play"></i>
+                                                <span>Introduction to the course</span>
+                                            </div>
+                                            <div class="right">
+                                                <span class="play">Preview</span>
+                                            </div>
+                                        </a>
+                                        <!-- play single area end -->
+                                        <!-- play single area start -->
+                                        <a href="#" class="play-vedio-wrapper">
+                                            <div class="left">
+                                                <i class="fa-light fa-circle-play"></i>
+                                                <span>Introduction to the course</span>
+                                            </div>
+                                            <div class="right">
+                                                <i class="fa-regular fa-lock"></i>
+                                            </div>
+                                        </a>
+                                        <!-- play single area end -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingTwo">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        <span>Learn to Storyboard</span>
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <!-- play single area start -->
+                                        <a href="#" class="play-vedio-wrapper">
+                                            <div class="left">
+                                                <i class="fa-light fa-circle-play"></i>
+                                                <span>Become a storyboard artist</span>
+                                            </div>
+                                            <div class="right">
+                                                <i class="fa-regular fa-lock"></i>
+                                            </div>
+                                        </a>
+                                        <!-- play single area end -->
+                                        <!-- play single area start -->
+                                        <a href="#" class="play-vedio-wrapper">
+                                            <div class="left">
+                                                <i class="fa-light fa-circle-play"></i>
+                                                <span>storyboard artist</span>
+                                            </div>
+                                            <div class="right">
+                                                <i class="fa-regular fa-lock"></i>
+                                            </div>
+                                        </a>
+                                        <!-- play single area end -->
+                                        <!-- play single area start -->
+                                        <a href="#" class="play-vedio-wrapper">
+                                            <div class="left">
+                                                <i class="fa-light fa-circle-play"></i>
+                                                <span>Introduction PHP</span>
+                                            </div>
+                                            <div class="right">
+                                                <i class="fa-regular fa-lock"></i>
+                                            </div>
+                                        </a>
+                                        <!-- play single area end -->
+                                        <!-- play single area start -->
+                                        <a href="#" class="play-vedio-wrapper">
+                                            <div class="left">
+                                                <i class="fa-light fa-circle-play"></i>
+                                                <span>LEarning Fundamentsl Elementor</span>
+                                            </div>
+                                            <div class="right">
+                                                <i class="fa-regular fa-lock"></i>
+                                            </div>
+                                        </a>
+                                        <!-- play single area end -->
+                                        <!-- play single area start -->
+                                        <a href="#" class="play-vedio-wrapper">
+                                            <div class="left">
+                                                <i class="fa-light fa-circle-play"></i>
+                                                <span>Enter to the course</span>
+                                            </div>
+                                            <div class="right">
+                                                <i class="fa-regular fa-lock"></i>
+                                            </div>
+                                        </a>
+                                        <!-- play single area end -->
+                                        <!-- play single area start -->
+                                        <a href="#" class="play-vedio-wrapper">
+                                            <div class="left">
+                                                <i class="fa-light fa-circle-play"></i>
+                                                <span>Main Part of the course</span>
+                                            </div>
+                                            <div class="right">
+                                                <i class="fa-regular fa-lock"></i>
+                                            </div>
+                                        </a>
+                                        <!-- play single area end -->
+                                        <!-- play single area start -->
+                                        <a href="#" class="play-vedio-wrapper">
+                                            <div class="left">
+                                                <i class="fa-light fa-circle-play"></i>
+                                                <span>Function About PHP</span>
+                                            </div>
+                                            <div class="right">
+                                                <i class="fa-regular fa-lock"></i>
+                                            </div>
+                                        </a>
+                                        <!-- play single area end -->
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <!-- course content accordion area end -->
+                    </div>
+                    <div class="single-instructor-area-details mt--40">
+                        <a href="#" class="thumbnail">
+                            <img src="{{ course.trainer.image.url }}" alt="instructor">
+                        </a>
+                        <div class="inner-instrustor-area">
+                            <h5 class="title">{{ course.trainer.name |upper}}</h5>
+                            <span class="deg">Instructor</span>
+                            
+                           
+                           
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="col-lg-4 order-cl-2 order-lg-2 order-md-1 order-sm-1 order-1 ">
+                    <!-- right- sticky bar area -->
+                    <div class="right-course-details mt--0">
+                        <!-- single course-sidebar -->
+                        <div class="course-side-bar">
+                            
+
+                            <div class="what-includes">
+                                <h5 class="title">This course includes: </h5>
+                                <div class="single-include">
+                                    <div class="left">
+                                        <span>Course for</span>
+                                    </div>
+                                    <div class="right">
+                                        <span>Public</span>
+                                    </div>
+                                </div>
+                                <div class="single-include">
+                                    <div class="left">
+                                        <span>Duration</span>
+                                    </div>
+                                    <div class="right">
+                                        <span>3 Days</span>
+                                    </div>
+                                </div>
+                                <div class="single-include">
+                                    <div class="left">
+                                        <span>Category</span>
+                                    </div>
+                                    <div class="right">
+                                        <span>Diet & Nutrition</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="single-include">
+                                    <div class="left">
+                                        <span>Certificate</span>
+                                    </div>
+                                    <div class="right">
+                                        <span>Yes</span>
+                                    </div>
+                                </div>
+                                 <div class="price-area">
+                                <h3 class="title">₹299</h3>
+                               
+                            </div>
+                           
+                            <a href="dasboard.php" class="rts-btn btn-primary">Enroll Now</a>
+                            </div>
+                        </div>
+                        <!-- single course-sidebar end -->
+                    </div>
+                    <!-- right- sticky bar area end -->
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- course details-area end -->
+
+{% include 'website/layouts/footer.html' %}

@@ -1,0 +1,177 @@
+{% include 'website/layouts/header.html' %}
+{% load static %}
+{% load custom_tags %}
+<!-- bread crumb area -->
+<div class="rts-bread-crumbarea-1 rts-section-gap bg_image">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="breadcrumb-main-wrapper">
+                    <h1 class="title">Our Courses</h1>
+                    <!-- breadcrumb pagination area -->
+                    <div class="pagination-wrapper">
+                        <a href="index.php">Home</a>
+                        <i class="fa-regular fa-chevron-right"></i>
+                        <a class="active" href="#">All Courses</a>
+                    </div>
+                    <!-- breadcrumb pagination area end -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- bread crumb area end -->
+
+
+<!-- course area start -->
+<div class="rts-course-default-area rts-section-gap">
+    <div class="container">
+        <div class="row g-5">
+            <div class="col-lg-3">
+                <!-- course-filter-area start -->
+                <div class="rts-course-filter-area">
+
+
+                    <!-- single filter wized -->
+                    <div class="single-filter-left-wrapper">
+                        <h6 class="title">Category</h6>
+                        <div class="checkbox-filter filter-body">
+                            <div class="checkbox-wrapper">
+                                <!-- single check box -->
+                                <div class="single-checkbox-filter">
+                                    <div class="check-box">
+                                        <input type="checkbox" id="category-1">
+                                        <label for="category-1">Diet & Nutrition</label><br>
+                                    </div>
+                                    <span class="number">(130)</span>
+                                </div>
+                                <!-- single check box end -->
+                                <!-- single check box -->
+                                <div class="single-checkbox-filter">
+                                    <div class="check-box">
+                                        <input type="checkbox" id="category-2">
+                                        <label for="category-2">Yoga</label><br>
+                                    </div>
+                                    <span class="number">(85)</span>
+                                </div>
+                                <!-- single check box end -->
+                                <!-- single check box -->
+                                <div class="single-checkbox-filter">
+                                    <div class="check-box">
+                                        <input type="checkbox" id="category-3">
+                                        <label for="category-3">Modern Science</label><br>
+                                    </div>
+                                    <span class="number">(210)</span>
+                                </div>
+                                <!-- single check box end -->
+                                <!-- single check box -->
+                                <div class="single-checkbox-filter">
+                                    <div class="check-box">
+                                        <input type="checkbox" id="category-4">
+                                        <label for="category-4">Panchakarma</label><br>
+                                    </div>
+                                    <span class="number">(45)</span>
+                                </div>
+                                <!-- single check box end -->
+                                <!-- single check box -->
+                                <div class="single-checkbox-filter">
+                                    <div class="check-box">
+                                        <input type="checkbox" id="category-5">
+                                        <label for="category-5">Photography</label><br>
+                                    </div>
+                                    <span class="number">(35)</span>
+                                </div>
+                                <!-- single check box end -->
+                                <!-- single check box -->
+                                <div class="single-checkbox-filter">
+                                    <div class="check-box">
+                                        <input type="checkbox" id="category-6">
+                                        <label for="category-6">Lifestyle Disorders</label><br>
+                                    </div>
+                                    <span class="number">(66)</span>
+                                </div>
+                                <!-- single check box end -->
+                                <!-- single check box -->
+                                <div class="single-checkbox-filter">
+                                    <div class="check-box">
+                                        <input type="checkbox" id="category-7">
+                                        <label for="category-7">Clinical Practice</label><br>
+                                    </div>
+                                    <span class="number">(95)</span>
+                                </div>
+                                <!-- single check box end -->
+                                <!-- single check box -->
+                                <div class="single-checkbox-filter">
+                                    <div class="check-box">
+                                        <input type="checkbox" id="category-8">
+                                        <label for="category-8">Cosmetology</label><br>
+                                    </div>
+                                    <span class="number">(150)</span>
+                                </div>
+                                <!-- single check box end -->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- single filter wized end -->
+
+                </div>
+                <!-- course-filter-area end -->
+            </div>
+            <div class="col-lg-9">
+                <div class="row">
+                    {% for course in course %}
+                    <div class="col-lg-6">
+                        <!-- single course style two -->
+                        <div class="rts-single-course">
+                            <a href="{% url 'website:course-details' course.slug %}" class="thumbnail">
+                                <img src="{{ course.image.url }}" alt="course">
+                            </a>
+
+                            <div class="tags-area-wrapper">
+                                <div class="single-tag">
+                                    <span>{{ course.category.title }}</span>
+                                </div>
+                            </div>
+                            <div class="lesson-studente">
+                                <div class="lesson">
+                                    <i class="fa-light fa-calendar-lines-pen"></i>
+                                    <span>{% lession_count course.id %}</span>
+                                </div>
+
+                            </div>
+                            <a href="{% url 'website:course-details' course.slug %}">
+                                <h5 class="title">{{ course.title }}</h5>
+                            </a>
+                            <p class="teacher">Instructor: {{ course.trainer.name }}</p>
+                            <div class="rating-and-price">
+
+                                <div class="price-area">
+
+                                    <div class="price">
+                                        ₹{{ course.price }}
+                                    </div>
+                                </div>
+                                <div class="btn-course">
+                                    <a href="{% url 'website:course-details' course.slug %}" class="rts-btn btn-primary">Enroll Now</a>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- single course style two end -->
+                    </div>
+                    {% endfor %}
+
+                    <!-- single course style two end -->
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+</div>
+<!-- course area end -->
+
+
+
+
+{% include 'website/layouts/footer.html' %}

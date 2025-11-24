@@ -54,7 +54,7 @@
                 {% for category in category %}
                 <div class="col-lg-3 col-md-4 col-sm-6 col-12">
                     <!-- single course category -->
-                    <a href="courses.php" class="single-category-2">
+                    <a href="{% url 'website:courses' category.slug %}" class="single-category-2">
                         <div class="icon">
                             <img src="{{ category.image.url }}" alt="category">
                         </div>
@@ -108,14 +108,14 @@
                                 <div class="lesson-studente">
                                     <div class="lesson">
                                         <i class="fa-light fa-calendar-lines-pen"></i>
-                                        <span>{{ course.lessons.count }} Lessons</span>
+                                        <span>{% lession_count course.id %} Lessons</span>
                                     </div>
                                    
                                 </div>
                                 <a href="course-single.php">
                                     <h5 class="title">{{ course.title }}</h5>
                                 </a>
-                                <p class="teacher">Instructor: {{ course.instructor.name }}</p>
+                                <p class="teacher">Instructor: {{ course.trainer.name }}</p>
                                 <div class="rating-and-price">
                                     
                                     <div class="price-area">

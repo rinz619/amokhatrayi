@@ -33,4 +33,9 @@ def course_count(id):
     lead = Courses.objects.filter(category=id).count()
     return lead
 
+@register.simple_tag()
+def lession_count(id):
+    lead = Lessions.objects.filter(course=id,is_active=True).count()
+    return lead
+
 
